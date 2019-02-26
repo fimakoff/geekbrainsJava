@@ -23,7 +23,7 @@ public class Main {
         System.out.println(isNegative(-5));
         String yourName = "Дима";
         hiName(yourName);
-        isYearLeap(2400);
+        isYearLeap(2000);
     }
 
     static double num (int a, int b, int c, int d){
@@ -71,8 +71,8 @@ public class Main {
             } else if (year%400==0){
                 System.out.println(year + " год - високосный");
             } else System.out.println(year + " год - високосный");
-        }/* else {
+        } else {
             System.out.println(year + " год - не високосный");
-        }*/
+        }
      }
 }
