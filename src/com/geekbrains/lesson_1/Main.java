@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(num(1,2,3,4));
         System.out.println(isTrue(10,11));
-        System.out.println(isPozitive(2));
+        System.out.println(isPoz(0));
     }
 
     static double num (int a, int b, int c, int d){
@@ -36,11 +36,13 @@ public class Main {
         return sumIsTrue;
     }
 
-    public static boolean isPozitive(int num){
+    public static String isPoz(int num){
+        String str1 = "Число положительное";
+        String str2 = "Число отрицательное";
         if (num>=0){
-            return true;
+            return str1;
         } else {
-            return false;
+            return str2;
         }
     }
 }
