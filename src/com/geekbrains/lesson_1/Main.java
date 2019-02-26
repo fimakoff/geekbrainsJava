@@ -15,6 +15,8 @@ public class Main {
         char ch = 'a';
         String str = "Hello, everyone!";
 
+        boolean boo = true;
+
         System.out.println(num(1,2,3,4));
         System.out.println(isTrue(10,11));
         System.out.println(isPoz(0));
