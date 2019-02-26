@@ -18,6 +18,7 @@ public class Main {
         System.out.println(num(1,2,3,4));
         System.out.println(isTrue(10,11));
         System.out.println(isPoz(0));
+        System.out.println(isNegative(-5));
     }
 
     static double num (int a, int b, int c, int d){
@@ -45,4 +46,12 @@ public class Main {
             return str2;
         }
     }
+     public static boolean isNegative(int num){
+        if (num < 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+     }
 }
