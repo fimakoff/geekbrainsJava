@@ -14,5 +14,12 @@ public class Main {
 
         char ch = 'a';
         String str = "Hello, everyone!";
+        
+        System.out.println(num(1,2,3,4));
+    }
+
+    static double num (int a, int b, int c, int d){
+        double res = a * (b + ((double)c / d));
+        return res;
     }
 }
