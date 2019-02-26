@@ -17,6 +17,7 @@ public class Main {
 
         System.out.println(num(1,2,3,4));
         System.out.println(isTrue(10,11));
+        System.out.println(isPozitive(2));
     }
 
     static double num (int a, int b, int c, int d){
