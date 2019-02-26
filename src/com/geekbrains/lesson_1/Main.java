@@ -19,6 +19,8 @@ public class Main {
         System.out.println(isTrue(10,11));
         System.out.println(isPoz(0));
         System.out.println(isNegative(-5));
+        String yourName = "Дима";
+        hiName(yourName);
     }
 
     static double num (int a, int b, int c, int d){
@@ -53,5 +55,8 @@ public class Main {
         else {
             return false;
         }
+     }
+     public static void hiName (String name){
+         System.out.println("Привет, " + name + '!');
      }
 }
