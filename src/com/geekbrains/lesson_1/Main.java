@@ -29,9 +29,17 @@ public class Main {
         int sum = a + b;
         if(sum > 10 && sum <= 20){
             sumIsTrue = true;
-        }else{
+        } else {
             sumIsTrue = false;
         }
         return sumIsTrue;
+    }
+
+    public static boolean isPozitive(int num){
+        if (num>=0){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
