@@ -43,13 +43,14 @@ public class Main {
     }
 
     public static String isPoz(int num){
-        String str1 = "Число положительное";
-        String str2 = "Число отрицательное";
-        if (num>=0){
-            return str1;
-        } else {
-            return str2;
-        }
+//        String str1 = "Число положительное";
+//        String str2 = "Число отрицательное";
+////        if (num>=0){
+////            return str1;
+////        } else {
+////            return str2;
+////        }
+        return num>=0 ? "Число положительное" : "Число отрицательное";
     }
      public static boolean isNegative(int num){
         if (num < 0){
