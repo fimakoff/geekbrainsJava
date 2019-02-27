@@ -27,8 +27,7 @@ public class Main {
     }
 
     static double num (int a, int b, int c, int d){
-        double res = a * (b + ((double)c / d));
-        return res;
+        return a * (b + ((double)c / d));
     }
 
     public static boolean isTrue (int a, int b){
