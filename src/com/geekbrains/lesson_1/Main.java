@@ -17,8 +17,8 @@ public class Main {
 
         boolean boo = true;
 
-        System.out.println(num(1,2,3,4));
-        System.out.println(isTrue(10,5));
+        System.out.println(num(1, 2, 3, 4));
+        System.out.println(isTrue(10, 5));
         System.out.println(isPoz(0));
         System.out.println(isNegative(-5));
         String yourName = "Дима";
@@ -26,56 +26,27 @@ public class Main {
         System.out.println(isYearLeap(2000));
     }
 
-    static double num (int a, int b, int c, int d){
-        return a * (b + ((double)c / d));
+    static double num(int a, int b, int c, int d) {
+        return a * (b + ((double) c / d));
     }
 
-    public static boolean isTrue (int a, int b){
-//        boolean sumIsTrue;
-//        int sum = a + b;
-//        if(sum > 10 && sum <= 20){
-//            sumIsTrue = true;
-//        } else {
-//            sumIsTrue = false;
-//        }
-//        return sumIsTrue;
+    public static boolean isTrue(int a, int b) {
         return (a + b > 10 && a + b <= 20) ? true : false;
     }
 
-    public static String isPoz(int num){
-//        String str1 = "Число положительное";
-//        String str2 = "Число отрицательное";
-////        if (num>=0){
-////            return str1;
-////        } else {
-////            return str2;
-////        }
-        return num>=0 ? "Число положительное" : "Число отрицательное";
+    public static String isPoz(int num) {
+        return num >= 0 ? "Число положительное" : "Число отрицательное";
     }
-     public static boolean isNegative(int num){
-//        if (num < 0){
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
+
+    public static boolean isNegative(int num) {
         return num < 0 ? true : false;
-     }
+    }
 
-     public static void hiName (String name){
-         System.out.println("Привет, " + name + '!');
-     }
+    public static void hiName(String name) {
+        System.out.println("Привет, " + name + '!');
+    }
 
-     public static String isYearLeap(int year){
-//        if(year%4==0 ){
-//            if (year%100==0 && year%400!=0){
-//                System.out.println(year + " год - не високосный");
-//            } else if (year%400==0){
-//                System.out.println(year + " год - високосный");
-//            } else System.out.println(year + " год - високосный");
-//        } else {
-//            System.out.println(year + " год - не високосный");
-//        }
-         return ((year%4==0 && year%100!=0) || year%400==0) ? year + " год - високосный" : year + " год - не високосный";
-     }
+    public static String isYearLeap(int year) {
+        return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? year + " год - високосный" : year + " год - не високосный";
+    }
 }
