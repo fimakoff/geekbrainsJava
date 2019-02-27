@@ -18,7 +18,7 @@ public class Main {
         boolean boo = true;
 
         System.out.println(num(1,2,3,4));
-        System.out.println(isTrue(10,11));
+        System.out.println(isTrue(10,5));
         System.out.println(isPoz(0));
         System.out.println(isNegative(-5));
         String yourName = "Дима";
@@ -32,14 +32,15 @@ public class Main {
     }
 
     public static boolean isTrue (int a, int b){
-        boolean sumIsTrue;
-        int sum = a + b;
-        if(sum > 10 && sum <= 20){
-            sumIsTrue = true;
-        } else {
-            sumIsTrue = false;
-        }
-        return sumIsTrue;
+//        boolean sumIsTrue;
+//        int sum = a + b;
+//        if(sum > 10 && sum <= 20){
+//            sumIsTrue = true;
+//        } else {
+//            sumIsTrue = false;
+//        }
+//        return sumIsTrue;
+        return (a + b > 10 && a + b <= 20) ? true : false;
     }
 
     public static String isPoz(int num){
