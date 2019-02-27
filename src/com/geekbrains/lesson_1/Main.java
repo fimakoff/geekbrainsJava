@@ -53,12 +53,13 @@ public class Main {
         return num>=0 ? "Число положительное" : "Число отрицательное";
     }
      public static boolean isNegative(int num){
-        if (num < 0){
-            return true;
-        }
-        else {
-            return false;
-        }
+//        if (num < 0){
+//            return true;
+//        }
+//        else {
+//            return false;
+//        }
+        return num < 0 ? true : false;
      }
 
      public static void hiName (String name){
