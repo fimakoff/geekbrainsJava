@@ -1,4 +1,4 @@
-package com.geekbrains.lesson3.homework;
+﻿package lesson3_HW;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,20 +6,22 @@ import java.util.Scanner;
 public class Main {
     static Scanner sc = new Scanner(System.in);
     static Random genRand = new Random();
+
     public static void main(String[] args) {
-	    // Задание №1
+        // Задание №1
         randomNumber();
 
         // Задание №2
         guessWords();
     }
-    public static void randomNumber(){
+
+    public static void randomNumber() {
         int usl;
-        do{
+        do {
             int hiddenNumber = genRand.nextInt(10);
             System.out.println("Я загадал число. Слабо отгадать?");
             for (int i = 0; i < 3; i++) {
-                System.out.print("Попытка №" + (i+1) + ": ");
+                System.out.print("Попытка №" + (i + 1) + ": ");
                 int guessNumber = sc.nextInt();
                 if (guessNumber > hiddenNumber) System.out.println("Загаданное число меньше");
                 else if (guessNumber < hiddenNumber) System.out.println("Загаданное число больше");
@@ -27,34 +29,30 @@ public class Main {
                     System.out.println("Угадано!");
                     break;
                 }
-                if (i==2) System.out.println("В этот раз тебе не повезло. Я загадал: "+ hiddenNumber);
+                if (i == 2) System.out.println("В этот раз тебе не повезло. Я загадал: " + hiddenNumber);
             }
             System.out.println("Повторить игру еще раз? 1 - да / 0 - нет");
             int repeat = sc.nextInt();
             usl = repeat; // Не понятно, почему я в условие цикла не могу сразу указать repeat?
-        }while(usl==1);
+        } while (usl == 1);
     }
 
-    public static void guessWords(){
-        String[] words = {"apple","orange","lemon","banana","apricot",
-                "avocado","broccoli","carrot","cherry","gralic","grape",
-                "melon","leak","kiwi","mango","mushroom","nut","olive",
-                "pea","peanut","pear","pepper","pineapple","pumpkin","potato"};
+    public static void guessWords() {
+        String[] words = {"apple", "orange", "lemon", "banana", "apricot",
+                "avocado", "broccoli", "carrot", "cherry", "gralic", "grape",
+                "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive",
+                "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
         int check = genRand.nextInt(words.length);
         String wordOfWorld = words[check];
-        char[] octothorpe = {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'};
+        char[] octothorpe = {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'};
         System.out.println("Я загадал слово. Отгадаешь?");
         String userOption = sc.next();
-        while(!userOption.equals(wordOfWorld)){
-            if (userOption!=wordOfWorld){
-                for (int i = 0; i <userOption.length() ; i++)
-                    if (wordOfWorld.charAt(i) == userOption.charAt(i)) octothorpe[i] = userOption.charAt(i);
-                System.out.println(octothorpe);
-            }
-            if (!wordOfWorld.equals(userOption)){
-                String nextUserOption = sc.next();
-                userOption=nextUserOption;
-            } else break;
+        while (!userOption.equals(wordOfWorld)) {
+            for (int i = 0; i < userOption.length(); i++)
+                if (wordOfWorld.charAt(i) == userOption.charAt(i)) octothorpe[i] = userOption.charAt(i);
+            System.out.println(octothorpe);
+            String nextUserOption = sc.next();
+            userOption = nextUserOption;
         }
         if (userOption.equals(wordOfWorld)) System.out.println("Красава! Угадал!");
     }
